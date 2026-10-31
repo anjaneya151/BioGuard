@@ -1,0 +1,34 @@
+BIOGUARD — LAST-MINUTE VIVA NOTES
+
+1) What problem does it solve?
+Households may not know how much biogas is stored or notice a slow leak early.
+
+2) What is implemented?
+A browser-based interactive simulation: gas-level gauge, low-gas state, possible-leak warning, trend chart, event history, and reset.
+
+3) Is it connected to real sensors?
+No. All readings are illustrative and generated locally by JavaScript.
+
+4) Which hardware is proposed?
+Low-pressure sensor, MQ-series combustible-gas sensor, Arduino/ESP32, LED bar-graph/display, buzzer.
+
+5) How would level be measured?
+Read pressure and calibrate it against the usable operating range of the particular digester. Pressure alone should not be claimed to give accurate volume without calibration.
+
+6) How would a leak be detected?
+A combustible-gas sensor near pipe joints would be monitored against a validated threshold; threshold crossing could trigger a buzzer/visual warning.
+
+7) What testing has been done?
+The software UI can be checked with normal use, low-gas, possible-leak and reset scenarios. No physical sensor tests have been performed.
+
+8) Main limitation?
+No physical hardware, calibration, or safety validation; it is not a certified gas-safety device.
+
+9) Future scope?
+Integrate sensors/controller, calibrate, connect display/buzzer, and validate safely under controlled supervision.
+
+10) Why call it low-cost?
+The source proposes commonly used sensor modules and a basic controller/display/alarm setup; actual cost would depend on selected components and local prices.
+
+HONEST PRESENTATION LINE:
+“Due to hardware unavailability, I built a browser-based simulation to demonstrate the intended user interface and scenario logic. The physical sensor-based version is the next implementation stage.”
